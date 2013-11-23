@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body onload ="alert('');">
+<div id = "container" onclick ="document.getElementById('secondContainer').innerHTML = 'Newtext'">
+		<a href="http://ya.ru">Y</a>
+		<a href="http://google.ru">G</a>
+	</div>
+	<div id = "secondContainer">
+    	<a href="http://yahoo.com">Y!</a>    
+	</div>
+	<script type="text/javascript">
+		var container1 = document.getElementById("container");
+		var links1 = container1.getElementsByTagName('a');
+		for(var i =0; i< links1.length;i++){
+			//document.write(links1[i]);
+			links1[i].href = "http://mail.ru";
+		}
+
+		var container2 = document.getElementById("secondContainer");
+		var links2 = container2.getElementsByTagName('a');
+		for (var i = 0; i < links2.length; i++) {
+			//document.write(links2[i]);
+			//document.write(links2.length());
+			links2[i].innerText="Yahoo";
+		}
+	</script>
+</body>
+</html>

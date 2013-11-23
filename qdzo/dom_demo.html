@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script src="dom.js"></script>
+	<title></title>
+</head>
+<body>
+		<p id="para">
+			text
+		</p>
+		<a href='#'>newText</a>
+		<a href='#'>newText</a>
+		<a href='#'>newText</a>
+
+		<script type="text/javascript">
+		var para = document.getElementById('para');
+		para.innerHTML += "<a href='#'>newText</a>";
+		var links = document.getElementsByTagName('a');
+		console.log(links);
+
+		for (var i = 0; i < links.length; i++) {
+			links[i].href = "http://ya.ru";
+			//links[i].style.fontWeight = "bold";
+			links[i].setAttribute("style","font-weight: bold; font-style: italic;");
+		};
+		</script>
+
+</body>
+</html>
