@@ -4,14 +4,11 @@ function Timer() {
     
     
     this.run = function(minutes) {
-        this.stop();
+        clearInterval(interval);
         time = parseInt(minutes)*60;
         interval = setInterval(this.minusSecond,1000);
     }
     
-    this.stop = function() {
-        clearInterval(interval);   
-    }
     
     
     this.minusSecond = function() {
@@ -22,8 +19,8 @@ function Timer() {
             time-=1;
         }
         else {
+            clearInterval(interval);
             alert('Dzzzzz-dzzzzzz!!!');
-            this.stop();
         }
     }
 
